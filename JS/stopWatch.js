@@ -1,9 +1,15 @@
 let s = 0;
 const counter = document.getElementById("counter__id");
 const start = () =>{
+const counterColor = document.getElementById("counter__id");
 const stopId = setInterval(() => {
     counter.innerText = ++s;
-}, 1000);
+    const R = Math.round(Math.random() * 256);
+    const G = Math.round(Math.random() * 256);
+    const B = Math.round(Math.random() * 256);
+    const A = parseFloat(Math.random().toFixed(2));
+    counterColor.style.color =`rgba(${R}, ${G}, ${B}, ${A})`;
+}, 1050);
 
 document.getElementById("btn_stop_id").addEventListener('click', ()=>{
 clearInterval(stopId)

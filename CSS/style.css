@@ -49,5 +49,4 @@ body {
 .btn__container button:hover {
     background-color: cyan;
     border: 2px solid red;
-    color: rgb(93, 93, 200);
 }
